@@ -32,17 +32,16 @@ void SortMaxRow(int[,] array)
 
         for (int j = 0; j < array.GetLength(1); j++)
 
-            for (int k = 1; k < array.GetLength(1); j++)
+            for (int k = 0; k < array.GetLength(1); k++)
             {
+                
+                if (array[i, j] <= array[i, k])continue;
+                                   
                 int temp = array[i, j];
-array[i, j] = array[i, k];
+                array[i, j] = array[i, k];
                 array[i, k] = temp; 
-                if (array[i, j] <= array[i, k])
-                {
-                   continue;
                 
                 
-                }
                  
             }
 
